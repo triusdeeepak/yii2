@@ -47,6 +47,7 @@ AppAsset::register($this);
         // $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
         $menuItems[] = ['label' => 'Register', 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest];
     } else {
+        $menuItems[] = ['label' => 'Profile', 'url' => ['/user/settings/profile']];        
         $menuItems[] = ['label' => 'Sign out (' . Yii::$app->user->identity->username . ')',
             'url' => ['/user/security/logout'],
             'linkOptions' => ['data-method' => 'post']];
